@@ -1,0 +1,12 @@
+{
+  "name": "excelToPDF",
+  "version": "1.0.0",
+  "description": "file converter ",
+  "main": "index.js",
+  "repository": "git@github.com:AJohnsoon/excelToPDF.git",
+  "author": "Allan Leal <allanjohnson.leal@gmail.com>",
+  "license": "yes",
+  "scripts": {
+    "start": "node ./index.js" 
+  }
+}
