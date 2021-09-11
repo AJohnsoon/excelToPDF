@@ -10,7 +10,6 @@ class Reader{
             console.info(data)
         })
     }
-
 }
 
 
