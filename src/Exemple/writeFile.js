@@ -1,8 +1,8 @@
 const fs = require('fs')
 
-const writeHere = 'Lorem Ipsum'
+const newText = 'Lorem Ipsum'
 
-fs.writeFile('./newWrite.info', writeHere, (err)=>{
+fs.writeFile('../../docs/newWrite.info', newText, (err)=>{
     if(err){
         console.error('Error writing file')
     }

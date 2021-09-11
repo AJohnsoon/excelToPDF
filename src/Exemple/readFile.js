@@ -3,7 +3,7 @@ const fs = require('fs')
 function ChangeTXTfile(){
     fs.readFile('../../docs/LoremIpsun.info', {encoding: 'utf-8'} ,(error, data)=>{
         if(error){
-            console.error('**Failed to read file!**')
+            console.error('** Failed to read file! **')
         } 
         console.info(data)
     })
@@ -16,17 +16,15 @@ function JSONExemple(names, dataInfo){
         } 
         let content = JSON.parse(data)
         content.names = names
-        content.data = dataInfo
+        content.message = dataInfo
         
         fs.writeFile('../../docs/exemple.json',JSON.stringify(content), (err)=>{
-            err ? 'Error when write JSON file' : console.info('> > >   File updated successfully < < <') 
+            err ? 'Error when write JSON file' : console.info('> > > File updated successfully < < <') 
         })
     })
 }
 
-const nameInArray = ['Two', 'Three', 'One']
-const message = 'JSON parse when you convert text to javascript'
-
-
+const nameInArray = ['One', 'Two', 'Three']
+const message = 'JSON parse when you convert text to javascript object, JSON stringfy when you convert javascript object to text'
 JSONExemple(nameInArray, message)
 ChangeTXTfile()
