@@ -1,5 +1,5 @@
 {
-  "name": "excelToPDF",
+  "name": "exceltopdf",
   "version": "1.0.0",
   "description": "file converter ",
   "main": "index.js",
@@ -7,6 +7,6 @@
   "author": "Allan Leal <allanjohnson.leal@gmail.com>",
   "license": "yes",
   "scripts": {
-    "start": "node ./index.js" 
+    "start": "node src/index.js" 
   }
 }

@@ -1,30 +1,30 @@
 const fs = require('fs')
 
 function ChangeTXTfile(){
-    fs.readFile('./LoremIpsun.info', {encoding: 'utf-8'} ,(error, data)=>{
+    fs.readFile('../../docs/LoremIpsun.info', {encoding: 'utf-8'} ,(error, data)=>{
         if(error){
-            console.error('Failed to read file!')
+            console.error('**Failed to read file!**')
         } 
         console.info(data)
     })
 }
 
 function JSONExemple(names, dataInfo){
-    fs.readFile('./exemple.json',{encoding: 'utf-8'},(error, data)=>{
+    fs.readFile('../../docs/exemple.json',{encoding: 'utf-8'},(error, data)=>{
         if(error){
-            console.error('Failed to read file!')
+            console.error('>> Failed to read file!<<')
         } 
         let content = JSON.parse(data)
         content.names = names
         content.data = dataInfo
         
-        fs.writeFile('./exemple.json',JSON.stringify(content), (err)=>{
+        fs.writeFile('../../docs/exemple.json',JSON.stringify(content), (err)=>{
             err ? 'Error when write JSON file' : console.info('> > >   File updated successfully < < <') 
         })
     })
 }
 
-const nameInArray = ['One', 'Two', 'Three']
+const nameInArray = ['Two', 'Three', 'One']
 const message = 'JSON parse when you convert text to javascript'
 
 
