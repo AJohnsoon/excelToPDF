@@ -1,9 +1,14 @@
 const Reader = require('./Services/Reader');
-const Writer = require('./Services/Writer');
-const myChange = require('./Modules/Changes')
 
 const read = new Reader()
-read.ReadFile('docs/myDoc.csv')
+async function main(){
+    try{
+        const data = await read.ReadFile('docs/myDoc.csv')
+        console.info(data)
+    }
+    catch(err){
+        console.info(err, ' >>>Error in index')
+    }
+}
 
-const write = new Writer()
-write.WriteFile('docs/myDoc.csv', myChange)
+main()
