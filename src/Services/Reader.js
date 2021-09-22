@@ -1,9 +1,9 @@
-const fs = require('fs');
-const util = require('util');
+import { readFile } from 'fs';
+import { promisify } from 'util';
 
-class Reader{  
+export default class Reader{  
     constructor(){
-        this.read = util.promisify(fs.readFile);
+        this.read = promisify(readFile);
     }
 
     async ReadFile(path){
@@ -14,7 +14,3 @@ class Reader{
         }
     }
 }
-
-
-
-module.exports = Reader

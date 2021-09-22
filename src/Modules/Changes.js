@@ -6,5 +6,4 @@ NLW-Together;Typescript;4;
 NLW-5;Typescript;4;
 NLW-4;Typescript;3;` 
 
-
-module.exports = Changes;
+export default Changes;

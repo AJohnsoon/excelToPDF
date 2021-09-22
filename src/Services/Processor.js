@@ -1,5 +1,5 @@
-class Processor{
-    static Process(data){
+export default class Processor{
+    Process(data){
         const myArray = data.split('\n');       
         const rows = [];
         
@@ -10,5 +10,3 @@ class Processor{
         return rows;
     }
 }
-
-module.exports = Processor;
