@@ -1,9 +1,9 @@
-const fs = require('fs');
+import { writeFile } from 'fs';
 
-class Writer{
+export default class Writer{
 
     WriteFile(path, fileNewText){
-        fs.writeFile(path, fileNewText, (err)=>{
+        writeFile(path, fileNewText, (err)=>{
             if(err){
                 console.error('Error writing file')
             }
@@ -11,8 +11,5 @@ class Writer{
         })
     }
 }
-
-
-module.exports = Writer
 
 
