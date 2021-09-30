@@ -12,12 +12,16 @@ async function main(){
     try{
         const data = await read.ReadFile('docs/myDoc.csv')        
         const preProcessorData = processData.Process(data);
-        const tableData = new Table(preProcessorData)
-        console.log(tableData)
-        
+        const tableData = new Table(preProcessorData);
+        console.log(tableData.rowsCount);
+        console.log(tableData.columnsCount);
+
+        //can you delete this row
+        tableData.rows.push(['6','DartPad','Dart/Flutter']);
+        console.log(tableData.rowsCount);
+
         // const info = write.WriteFile('docs/myDoc.csv', Changes)
-        // console.info(info)
-        
+        // console.info(info);        
     }
     catch(err){
         console.info(err, ' >>>Error in index')
