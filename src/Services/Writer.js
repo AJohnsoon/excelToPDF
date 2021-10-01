@@ -1,14 +1,22 @@
-import { writeFile } from 'fs';
+import fs from 'fs';
+import util  from 'util';
 
-export default class Writer{
 
-    WriteFile(path, fileNewText){
-        writeFile(path, fileNewText, (err)=>{
-            if(err){
-                console.error('Error writing file')
-            }
-            console.info('> > > File updated successfully!! < < <')
-        })
+export default class Writer {
+
+    constructor() {
+        this.writer = util.promisify(fs.writeFile);
+    }
+
+    async WriterFile(fileName, data) {
+        try{
+            await this.writer(fileName, data)            
+            return true
+        }
+        catch(err){             
+            console.info(">>>>> error a write file")
+            return false
+        }
     }
 }
 

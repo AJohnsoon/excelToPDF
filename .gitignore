@@ -104,4 +104,6 @@ dist
 .tern-port
 
 # Personal documents
+*.html
 /docs
+
