@@ -3,6 +3,7 @@ import Writer from './Services/Writer.js';
 import Process from './Modules/Processor.js';
 import Table from './Modules/Table.js';
 import HtmlParser from './Modules/htmlParser.js';
+import { PDFWriter } from './Modules/PDF.js';
 
 const reader = new Reader()
 const writer = new Writer()
@@ -17,9 +18,9 @@ export default async function App(){
         const htmlINFO = await HtmlParser.Parse(tableData);
         
         writer.WriterFile("generate.html", htmlINFO);
-            
+        PDFWriter.WritePDF("generate.pdf", htmlINFO );
         /* 
-        ** generate random html form
+            **generate random html form**
             writer.WriterFile(Date.now()+".html", htmlINFO);
         */
     }

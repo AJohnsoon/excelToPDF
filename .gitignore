@@ -105,5 +105,6 @@ dist
 
 # Personal documents
 *.html
+*.pdf
 /docs
 
